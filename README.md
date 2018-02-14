@@ -1,5 +1,7 @@
 # KBDouble
 
+[![build](https://ci.appveyor.com/api/projects/status/github/chge/kbdouble?branch=master&svg=true)](https://ci.appveyor.com/project/chge/kbdouble)
+
 Both English and Russian keyboards in one layout for Windows.
 
 Pros:
@@ -39,6 +41,8 @@ The same as `Ctrl` + `Alt` + `Key`, or `RAlt` + `Key` for most keyboards.
 `Space` is [`U+202F NARROW NO-BREAK SPACE`](https://en.wikipedia.org/wiki/Thin_space).
 
 # Customization
+
+The easiest way to change languages or extra symbols is to fork this repo and perform automatic build.
 
 In order to build or make changes locally, you'll need the [Microsoft Keyboard Layout Creator](https://www.microsoft.com/en-us/download/details.aspx?id=22339). Unfortunately, this beautiful piece of software has no useful command-line interface.
 

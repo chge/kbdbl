@@ -1,0 +1,29 @@
+platform:
+  - x64
+
+install:
+  - ps: Start-FileDownload 'https://download.microsoft.com/download/1/1/8/118aedd2-152c-453f-bac9-5dd8fb310870/MSKLC.exe'
+
+build_script:
+  - cmd: cscript /E:jscript build.js
+
+after_build:
+  - ps: Copy-Item -Path (Join-Path $env:SYSTEMDRIVE -ChildPath $env:HOMEPATH | Join-Path -ChildPath 'Documents\kbdouble') -Recurse -Destination (Join-Path $env:APPVEYOR_BUILD_FOLDER -ChildPath 'build') -Container
+  - ps: Copy-Item -Path (Join-Path $env:SYSTEMDRIVE -ChildPath $env:HOMEPATH | Join-Path -ChildPath 'Documents\KeyboardVerify.log') -Destination (Join-Path $env:APPVEYOR_BUILD_FOLDER -ChildPath 'build') -Container
+
+artifacts:
+  - path: build
+    name: kbdouble_$(appveyor_build_version)
+
+deploy:
+  - provider: GitHub
+    release: $(appveyor_build_version)
+    artifact: /zip/
+    draft: false
+    prerelease: false
+    force_update: true
+    auth_token:
+      secure: 4BT36vIRXSKz9e5wEuzkGkjJUXksoKxFzcunE7KbJWlamkP3DxGh1f51OkmgbnLm
+    on:
+      branch: master
+      appveyor_repo_tag: false
