@@ -1,6 +1,6 @@
-# KBDouble
+# KBDbl
 
-[![build](https://ci.appveyor.com/api/projects/status/github/chge/kbdouble?branch=master&svg=true)](https://ci.appveyor.com/project/chge/kbdouble)
+[![build](https://ci.appveyor.com/api/projects/status/github/chge/kbdbl?branch=master&svg=true)](https://ci.appveyor.com/project/chge/kbdbl)
 
 Both English and Russian keyboards in one layout for Windows.
 
@@ -16,11 +16,11 @@ Cons:
 
 # Installation
 
-KBDouble is a system keyboard (input method) packed into DLL, so it needs to be installed.
+KBDbl is a system keyboard (input method) packed into DLL, so it needs to be installed.
 
 * Run `setup.exe` or MSI installer suitable for your OS.
-* You'll see a friendly elevation warning. If you don't trust next man, you can [build KBDouble yourself](#customization).
-* Add `KBDouble` keyboard (input method) for English language.
+* You'll see a friendly elevation warning. If you don't trust next man, you can [build KBDbl yourself](#customization).
+* Add `KBDbl` keyboard (input method) for English language.
 * Remove other keyboards (input methods) for English language, if needed.
 * Remove other languages, if needed.
 
@@ -46,9 +46,9 @@ The easiest way to change languages or extra symbols is to fork this repo and pe
 
 In order to build or make changes locally, you'll need the [Microsoft Keyboard Layout Creator](https://www.microsoft.com/en-us/download/details.aspx?id=22339). Unfortunately, this beautiful piece of software has no useful command-line interface.
 
-It's good to know that Windows disallow using multiple layouts with the same name or even description, so you have to rename your masterpiece or uninstall KBDouble first. You'll probably notice that maximum allowed length for case-insensitive layout name is 8 characters, which should be enough for everyone.
+It's good to know that Windows disallow using multiple layouts with the same name or even description, so you have to rename your masterpiece or uninstall KBDbl first. You'll probably notice that maximum allowed length for case-insensitive layout name is 8 characters, which should be enough for everyone.
 
-* Rename `kbdouble.klc` and open it in MSKLC.
+* Rename `kbdbl.klc` and open it in MSKLC.
 * Make desired changes using its modern user-friendly interface.
 * Poke `Project` → `Build DLL and Setup package`.
 * Read build warnings. Note that duplicated symbols are intended.

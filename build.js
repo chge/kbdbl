@@ -28,7 +28,7 @@ Shell.SendKeys('%{C}');
 
 // NOTE open MSKLC and build the layout.
 WScript.Echo('Starting MSKLC...');
-child = Shell.Exec('"%PROGRAMFILES(X86)%\\Microsoft Keyboard Layout Creator 1.4\\MSKLC.exe" "' + Shell.currentDirectory + '\\kbdouble.klc"');
+child = Shell.Exec('"%PROGRAMFILES(X86)%\\Microsoft Keyboard Layout Creator 1.4\\MSKLC.exe" "' + Shell.currentDirectory + '\\kbdbl.klc"');
 WScript.Sleep(5000);
 Shell.AppActivate(child.processID);
 // NOTE Project → Build DLL and Setup package.
